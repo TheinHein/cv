@@ -1,0 +1,99 @@
+.Preview {
+  min-width: 8.5in;
+  width: 8.5in;
+  height: 11in;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+
+.Preview-general {
+  margin: 0.25in 0.25in;
+}
+
+.Preview-session {
+  margin: 0.25in;
+}
+
+.Preview-general-name {
+  font-size: 1.6em;
+  color: #5d83c0;
+}
+
+.Preview-general-title {
+  font-size: 1.2em;
+  color: grey;
+}
+
+.Preview-contact {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+.Preview-skills {
+  margin: 0.05in 0.25in;
+}
+
+.Preview-header-2 {
+  font-size: 1.4em;
+  color: #5d83c0;
+  font-weight: 700;
+  margin-bottom: 0.05in;
+}
+
+.Preview-header-3 {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.Preview-skills ul {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.Preview-skills li {
+  background-color: #5d83c0;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.Preview-header-4 {
+  font-size: 1.3em;
+}
+
+.Preview-work-list {
+  margin-bottom: 0.15in;
+}
+
+.Preview-work-dur-loc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Preview-italic {
+  font-size: 0.9em;
+  color: grey;
+  font-style: italic;
+}
+
+.Preview-work-tasks-list {
+  margin-left: 0.1in;
+}
+
+.Preview-work-task {
+  list-style-type: "- ";
+}
+
+.Preview-organizations-list,
+.Preview-languages-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Preview-color {
+  color: #5d83c0;
+}

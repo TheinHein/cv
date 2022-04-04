@@ -1,0 +1,11 @@
+.CV {
+  display: flex;
+  justify-content: center;
+}
+
+.CV-divider {
+  min-width: 2px;
+  width: 2px;
+  background-color: black;
+  margin: 0px 20px;
+}
