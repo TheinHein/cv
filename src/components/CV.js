@@ -16,7 +16,7 @@ export default class CV extends Component {
   render() {
     return (
       <div className="CV">
-        <Form />
+        <Form cv={this.state} />
         <div className="CV-divider" />
         <Preview cv={this.state} />
       </div>

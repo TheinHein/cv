@@ -26,12 +26,14 @@ export default class Preview extends Component {
         <div className="Preview-contact">
           <div>{contact.email}</div>
           <div>{contact.phone}</div>
-          <div>{contact.address}</div>
+          <div>
+            {contact.city}, {contact.country}
+          </div>
           <div>{contact.linkedin}</div>
         </div>
         <hr />
         <div className="Preview-skills">
-          {skills.length > 0 && <div className="Preview-header-2">SKILLS</div>}
+          {skills.length > 0 && <div className="header-2">SKILLS</div>}
           <ul>
             {skills.map((s) => (
               <li key={s.id}>{s.name}</li>
@@ -39,9 +41,7 @@ export default class Preview extends Component {
           </ul>
         </div>
         <div className="Preview-session">
-          {work.length > 0 && (
-            <div className="Preview-header-2">WORK EXPERIENCE</div>
-          )}
+          {work.length > 0 && <div className="header-2">WORK EXPERIENCE</div>}
           <ul>
             {work.map((w) => (
               <li className="Preview-work-list" key={w.id}>
@@ -49,7 +49,9 @@ export default class Preview extends Component {
                 <div className="Preview-header-4">{w.company}</div>
                 <div className="Preview-work-dur-loc">
                   <div className="Preview-italic">{w.duration}</div>
-                  <div className="Preview-italic">{w.location}</div>
+                  <div className="Preview-italic">
+                    {w.city}, {w.country}
+                  </div>
                 </div>
                 <ul className="Preview-work-tasks-list">
                   {w.tasks.map((t) => (
@@ -63,9 +65,7 @@ export default class Preview extends Component {
           </ul>
         </div>
         <div className="Preview-session">
-          {education.length > 0 && (
-            <div className="Preview-header-2">EDUCATION</div>
-          )}
+          {education.length > 0 && <div className="header-2">EDUCATION</div>}
           <ul>
             {education.map((e) => (
               <li key={e.id}>
@@ -78,7 +78,7 @@ export default class Preview extends Component {
         </div>
         <div className="Preview-session">
           {organizations.length > 0 && (
-            <div className="Preview-header-2">ORGANIZATIONS</div>
+            <div className="header-2">ORGANIZATIONS</div>
           )}
 
           <ul className="Preview-organizations-list">
@@ -91,9 +91,7 @@ export default class Preview extends Component {
           </ul>
         </div>
         <div className="Preview-session">
-          {languages.length > 0 && (
-            <div className="Preview-header-2">LANGUAGES</div>
-          )}
+          {languages.length > 0 && <div className="header-2">LANGUAGES</div>}
           <ul className="Preview-languages-list">
             {languages.map((l) => (
               <li key={l.id}>

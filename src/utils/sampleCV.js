@@ -11,7 +11,8 @@ const sampleCV = {
   contact: {
     email: "john.doe@gmail.com",
     phone: "202-555-0166",
-    address: "New York, USA",
+    city: "New York",
+    country: "USA",
     linkedin: "linkedin.com/in/john.doe",
   },
   skills: [
@@ -66,7 +67,8 @@ const sampleCV = {
       position: "Business Development Manager",
       company: "AirState Solutions",
       duration: "09/2014 - 06/2017",
-      location: "New York,USA",
+      city: "New York",
+      country: "USA",
       tasks: [
         {
           id: uniqid(),
@@ -91,7 +93,8 @@ const sampleCV = {
       position: "Business Development Assistant",
       company: "AirState Solutions",
       duration: "08/2012 - 06/2010",
-      location: "Chicago, USA",
+      city: "Chicago",
+      country: "USA",
       tasks: [
         {
           id: uniqid(),

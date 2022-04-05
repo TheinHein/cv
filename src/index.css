@@ -19,3 +19,55 @@ hr {
   height: 1px;
   background-color: black;
 }
+
+textarea {
+  resize: none;
+  width: 90%;
+  height: 60px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  border: none;
+  padding: 3px 5px;
+  margin: 5px;
+  border-radius: 5px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  width: 100px;
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  border: none;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+button {
+  outline: none;
+  color: white;
+  background-color: #5d83c0;
+  border: none;
+  width: fit-content;
+  padding: 0px 10px;
+  height: 25px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.input-200 {
+  width: 200px;
+}
+
+.header-2 {
+  font-size: 1.4em;
+  color: #5d83c0;
+  font-weight: 700;
+  margin-bottom: 0.05in;
+}
