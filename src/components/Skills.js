@@ -4,7 +4,7 @@ import "../styles/Skills.css";
 
 export default class Skills extends Component {
   render() {
-    const { skills } = this.props;
+    const { skills, handleChange } = this.props;
     return (
       <div className="Skills">
         <div className="header-2">
@@ -14,7 +14,13 @@ export default class Skills extends Component {
           {skills.map((s) => (
             <li key={s.id}>
               <label htmlFor={s.id}>
-                <input type="text" value={s.name} className="input-200" />
+                <input
+                  type="text"
+                  id={s.id}
+                  value={s.name}
+                  className="input-200"
+                  onChange={handleChange}
+                />
               </label>
               <button>x</button>
             </li>

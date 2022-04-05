@@ -4,7 +4,7 @@ import "../styles/Education.css";
 
 export default class Education extends Component {
   render() {
-    const { education } = this.props;
+    const { education, handleChange } = this.props;
     return (
       <div className="Education">
         <div className="header-2">
@@ -12,25 +12,43 @@ export default class Education extends Component {
         </div>
         <ul className="Education-list">
           {education.map((e) => (
-            <li key={e.id}>
+            <li key={e.id} id={e.id}>
               <hr />
               <button className="Education-list-del">Delete Education x</button>
               <div>
                 <label htmlFor="degree">
                   <span>Title</span>
-                  <input type="text" value={e.degree} className="input-200" />
+                  <input
+                    type="text"
+                    value={e.degree}
+                    className="input-200"
+                    name="degree"
+                    onChange={handleChange}
+                  />
                 </label>
               </div>
               <div>
                 <label htmlFor="school">
                   <span>School</span>
-                  <input type="text" value={e.school} className="input-200" />
+                  <input
+                    type="text"
+                    value={e.school}
+                    className="input-200"
+                    name="school"
+                    onChange={handleChange}
+                  />
                 </label>
               </div>
               <div>
                 <label htmlFor="years">
                   <span>Duration</span>
-                  <input type="text" value={e.years} className="input-200" />
+                  <input
+                    type="text"
+                    value={e.years}
+                    className="input-200"
+                    name="years"
+                    onChange={handleChange}
+                  />
                 </label>
               </div>
             </li>
