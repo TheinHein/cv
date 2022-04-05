@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import "../styles/Education.css";
+
 export default class Education extends Component {
   render() {
     const { education } = this.props;
@@ -8,10 +10,11 @@ export default class Education extends Component {
         <div className="header-2">
           Education <button>Add Education +</button>
         </div>
-        <ul>
+        <ul className="Education-list">
           {education.map((e) => (
             <li key={e.id}>
-              <button>x</button>
+              <hr />
+              <button className="Education-list-del">Delete Education x</button>
               <div>
                 <label htmlFor="degree">
                   <span>Title</span>

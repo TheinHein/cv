@@ -6,3 +6,11 @@
 .Work-task label {
   flex: 1 0 0%;
 }
+.Work-list {
+  position: relative;
+}
+
+.Work-list-del {
+  position: absolute;
+  right: 0;
+}
