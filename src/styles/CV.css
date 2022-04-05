@@ -1,3 +1,21 @@
-.CV {
-  padding: 10px;
+.CV-divider {
+  position: absolute;
+  top: 5%;
+  right: 50%;
+  width: 2px;
+  height: 90%;
+  z-index: 100;
+  background-color: black;
+}
+
+@media (max-width: 19in) {
+  .CV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .CV-divider {
+    display: none;
+  }
 }

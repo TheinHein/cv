@@ -56,6 +56,7 @@ export default class CV extends Component {
     return (
       <div className="CV">
         <Form cv={this.state} handleChange={this.handleChange} />
+        <div className="CV-divider" />
         <Preview cv={this.state} />
       </div>
     );

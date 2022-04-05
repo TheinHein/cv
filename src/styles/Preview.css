@@ -8,7 +8,7 @@
   overflow: auto;
   position: fixed;
   top: 10px;
-  right: 10px;
+  right: 5%;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -100,4 +100,10 @@
 
 .Preview-color {
   color: #5d83c0;
+}
+
+@media (max-width: 19in) {
+  .Preview {
+    position: static;
+  }
 }
