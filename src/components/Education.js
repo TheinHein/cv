@@ -4,17 +4,22 @@ import "../styles/Education.css";
 
 export default class Education extends Component {
   render() {
-    const { education, handleChange } = this.props;
+    const { education, handleChange, handleDelete, handleAdd } = this.props;
     return (
       <div className="Education">
-        <div className="header-2">
-          Education <button>Add Education +</button>
+        <div className="header-2 split">
+          <div>Education</div>
+          <button id="education" onClick={handleAdd}>
+            Add Education +
+          </button>
         </div>
         <ul className="Education-list">
           {education.map((e) => (
             <li key={e.id} id={e.id}>
               <hr />
-              <button className="Education-list-del">Delete Education x</button>
+              <button className="Education-list-del" onClick={handleDelete}>
+                Delete Education x
+              </button>
               <div>
                 <label htmlFor="degree">
                   <span>Title</span>
@@ -39,14 +44,24 @@ export default class Education extends Component {
                   />
                 </label>
               </div>
-              <div>
-                <label htmlFor="years">
-                  <span>Duration</span>
+              <div className="gap">
+                <label htmlFor="start">
+                  <span>Start Date</span>
                   <input
-                    type="text"
-                    value={e.years}
+                    type="month"
+                    value={e.start}
                     className="input-200"
-                    name="years"
+                    name="start"
+                    onChange={handleChange}
+                  />
+                </label>
+                <label htmlFor="end">
+                  <span>End Date</span>
+                  <input
+                    type="month"
+                    value={e.end}
+                    className="input-200"
+                    name="end"
                     onChange={handleChange}
                   />
                 </label>

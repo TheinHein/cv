@@ -21,19 +21,41 @@ export default class Form extends Component {
       organizations,
       languages,
     } = this.props.cv;
-    const { handleChange } = this.props;
+    const { handleChange, handleDelete, handleAdd } = this.props;
     return (
       <div className="Form">
         <General general={general} handleChange={handleChange} />
         <Contact contact={contact} handleChange={handleChange} />
-        <Skills skills={skills} handleChange={handleChange} />
-        <Work work={work} handleChange={handleChange} />
-        <Education education={education} handleChange={handleChange} />
+        <Skills
+          skills={skills}
+          handleChange={handleChange}
+          handleDelete={handleDelete}
+          handleAdd={handleAdd}
+        />
+        <Work
+          work={work}
+          handleChange={handleChange}
+          handleDelete={handleDelete}
+          handleAdd={handleAdd}
+        />
+        <Education
+          education={education}
+          handleChange={handleChange}
+          handleDelete={handleDelete}
+          handleAdd={handleAdd}
+        />
         <Organizations
           organizations={organizations}
           handleChange={handleChange}
+          handleDelete={handleDelete}
+          handleAdd={handleAdd}
         />
-        <Languages languages={languages} handleChange={handleChange} />
+        <Languages
+          languages={languages}
+          handleChange={handleChange}
+          handleDelete={handleDelete}
+          handleAdd={handleAdd}
+        />
       </div>
     );
   }

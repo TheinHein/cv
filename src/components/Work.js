@@ -4,17 +4,22 @@ import "../styles/Work.css";
 
 export default class Work extends Component {
   render() {
-    const { work, handleChange } = this.props;
+    const { work, handleChange, handleDelete, handleAdd } = this.props;
     return (
       <div className="Work">
-        <div className="header-2">
-          WORK <button>Add Work +</button>
+        <div className="header-2 split">
+          <div>WORK EXPERIENCE</div>
+          <button id="work" onClick={handleAdd}>
+            Add Work +
+          </button>
         </div>
         <ul className="Work-list">
           {work.map((w) => (
             <li key={w.id} id={w.id}>
               <hr />
-              <button className="Work-list-del">Delete Work x</button>
+              <button className="Work-list-del" onClick={handleDelete}>
+                Delete Work x
+              </button>
               <div>
                 <label htmlFor="position">
                   <span>Job Title</span>
@@ -39,19 +44,29 @@ export default class Work extends Component {
                   />
                 </label>
               </div>
-              <div>
-                <label htmlFor="duration">
-                  <span>Duration</span>
+              <div className="gap">
+                <label htmlFor="start">
+                  <span>Start Date</span>
                   <input
-                    type="text"
-                    value={w.duration}
+                    type="month"
+                    value={w.start}
                     className="input-200"
-                    name="duration"
+                    name="start"
+                    onChange={handleChange}
+                  />
+                </label>
+                <label htmlFor="end">
+                  <span>End Date</span>
+                  <input
+                    type="month"
+                    value={w.end}
+                    className="input-200"
+                    name="end"
                     onChange={handleChange}
                   />
                 </label>
               </div>
-              <div>
+              <div className="gap">
                 <label htmlFor="city">
                   <span>City</span>
                   <input
@@ -59,6 +74,7 @@ export default class Work extends Component {
                     value={w.city}
                     name="city"
                     onChange={handleChange}
+                    className="input-200"
                   />
                 </label>
                 <label htmlFor="country">
@@ -68,23 +84,30 @@ export default class Work extends Component {
                     value={w.country}
                     name="country"
                     onChange={handleChange}
+                    className="input-200"
                   />
                 </label>
               </div>
-              <div>Tasks</div>
+              <div className="split">
+                <div>TASKS</div>
+                <button id="task" onClick={handleAdd}>
+                  Add Task +
+                </button>
+              </div>
               <ul>
                 {w.tasks.map((t) => (
-                  <li key={t.id} className="Work-task">
+                  <li key={t.id} id={t.id} className="Work-task">
                     <label htmlFor="task">
                       <textarea
                         type="text"
-                        id={t.id}
                         value={t.task}
                         name="task"
                         onChange={handleChange}
                       />
                     </label>
-                    <button>x</button>
+                    <button id="delete-task" onClick={handleDelete}>
+                      x
+                    </button>
                   </li>
                 ))}
               </ul>

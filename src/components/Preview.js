@@ -28,7 +28,7 @@ export default class Preview extends Component {
             <div>{contact.email}</div>
             <div>{contact.phone}</div>
             <div>
-              {contact.city}, {contact.country}
+              {contact.city} , {contact.country}
             </div>
             <div>{contact.linkedin}</div>
           </div>
@@ -49,7 +49,9 @@ export default class Preview extends Component {
                   <div className="Preview-header-3">{w.position}</div>
                   <div className="Preview-header-4">{w.company}</div>
                   <div className="Preview-work-dur-loc">
-                    <div className="Preview-italic">{w.duration}</div>
+                    <div className="Preview-italic">
+                      {w.start} - {w.end}
+                    </div>
                     <div className="Preview-italic">
                       {w.city}, {w.country}
                     </div>
@@ -72,7 +74,9 @@ export default class Preview extends Component {
                 <li key={e.id}>
                   <div className="Preview-header-3">{e.degree}</div>
                   <div className="Preview-header-4">{e.school}</div>
-                  <div className="Preview-italic">{e.years}</div>
+                  <div className="Preview-italic">
+                    {e.start} - {e.end}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -86,7 +90,7 @@ export default class Preview extends Component {
               {organizations.map((o) => (
                 <li key={o.id}>
                   <div>{o.name}</div>
-                  <div>{`(${o.duration})`}</div>
+                  <div>{`(${o.start} - ${o.end})`}</div>
                 </li>
               ))}
             </ul>

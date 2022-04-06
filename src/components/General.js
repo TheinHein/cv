@@ -6,6 +6,7 @@ export default class General extends Component {
     return (
       <div>
         <div className="header-2">GENERAL INFORMATION</div>
+        <hr />
         <div>
           <label htmlFor="title">
             <span>Title</span>
@@ -18,13 +19,14 @@ export default class General extends Component {
             />
           </label>
         </div>
-        <div>
+        <div className="gap">
           <label htmlFor="firstName">
             <span>First Name</span>
             <input
               name="firstName"
               type="text"
               value={general.firstName}
+              className="input-200"
               onChange={handleChange}
             />
           </label>
@@ -34,6 +36,7 @@ export default class General extends Component {
               name="lastName"
               type="text"
               value={general.lastName}
+              className="input-200"
               onChange={handleChange}
             />
           </label>

@@ -15,11 +15,6 @@ li {
   list-style: none;
 }
 
-hr {
-  height: 1px;
-  background-color: black;
-}
-
 textarea {
   resize: none;
   width: 90%;
@@ -47,6 +42,10 @@ input {
   border-radius: 5px;
 }
 
+.input-120 {
+  width: 120px;
+}
+
 button {
   outline: none;
   color: white;
@@ -69,4 +68,16 @@ button {
   color: #5d83c0;
   font-weight: 700;
   margin-bottom: 0.05in;
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }

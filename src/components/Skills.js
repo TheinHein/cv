@@ -4,16 +4,20 @@ import "../styles/Skills.css";
 
 export default class Skills extends Component {
   render() {
-    const { skills, handleChange } = this.props;
+    const { skills, handleChange, handleDelete, handleAdd } = this.props;
     return (
       <div className="Skills">
-        <div className="header-2">
-          SKILLS <button>Add Skill +</button>
+        <div className="header-2 split">
+          <div>SKILLS</div>
+          <button id="skills" onClick={handleAdd}>
+            Add Skill +
+          </button>
         </div>
+        <hr />
         <ul>
           {skills.map((s) => (
-            <li key={s.id}>
-              <label htmlFor={s.id}>
+            <li key={s.id} id={s.id}>
+              <label htmlFor="name">
                 <input
                   type="text"
                   id={s.id}
@@ -22,7 +26,7 @@ export default class Skills extends Component {
                   onChange={handleChange}
                 />
               </label>
-              <button>x</button>
+              <button onClick={handleDelete}>x</button>
             </li>
           ))}
         </ul>

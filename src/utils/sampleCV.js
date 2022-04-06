@@ -66,7 +66,8 @@ const sampleCV = {
       id: uniqid(),
       position: "Business Development Manager",
       company: "AirState Solutions",
-      duration: "09/2014 - 06/2017",
+      start: "2014-09",
+      end: "2017-06",
       city: "New York",
       country: "USA",
       tasks: [
@@ -92,7 +93,8 @@ const sampleCV = {
       id: uniqid(),
       position: "Business Development Assistant",
       company: "AirState Solutions",
-      duration: "08/2012 - 06/2010",
+      start: "2012-08",
+      end: "2010-06",
       city: "Chicago",
       country: "USA",
       tasks: [
@@ -120,24 +122,28 @@ const sampleCV = {
       id: uniqid(),
       degree: "MSc in Economics and Business Administration",
       school: "The University of Chicago",
-      years: "09/2008 - 06/2010",
+      start: "2008-09",
+      end: "2010-06",
     },
   ],
   organizations: [
     {
       id: uniqid(),
       name: "American Management Association",
-      duration: "2015 - Present",
+      start: "2015-03",
+      end: "2022-07",
     },
     {
       id: uniqid(),
       name: "Association of Private Enterprise Education",
-      duration: "2014 - Present",
+      start: "2014-09",
+      end: "2022-04",
     },
     {
       id: uniqid(),
       name: "eBusiness Association (eBA)",
-      duration: "2013 - Present",
+      start: "2013-06",
+      end: "2022-05",
     },
   ],
   languages: [

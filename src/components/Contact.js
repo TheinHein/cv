@@ -6,6 +6,7 @@ export default class Contact extends Component {
     return (
       <div className="Contact ">
         <div className="header-2">CONTACT</div>
+        <hr />
         <div>
           <label htmlFor="email">
             <span>Email</span>
@@ -18,13 +19,14 @@ export default class Contact extends Component {
             />
           </label>
         </div>
-        <div>
+        <div className="gap">
           <label htmlFor="city">
             <span>City</span>
             <input
               type="text"
               value={contact.city}
               name="city"
+              className="input-200"
               onChange={handleChange}
             />
           </label>
@@ -34,11 +36,12 @@ export default class Contact extends Component {
               type="text"
               value={contact.country}
               name="country"
+              className="input-200"
               onChange={handleChange}
             />
           </label>
         </div>
-        <div>
+        <div className="gap">
           <label htmlFor="linkedin">
             <span>Linkedin</span>
             <input
@@ -49,14 +52,13 @@ export default class Contact extends Component {
               onChange={handleChange}
             />
           </label>
-        </div>
-        <div>
           <label htmlFor="phone">
             <span>Phone</span>
             <input
               type="tel"
               value={contact.phone}
               name="phone"
+              className="input-200"
               onChange={handleChange}
             />
           </label>
